@@ -10,7 +10,8 @@ int main(int argc, char *argv[])
   }
   else
   {
-  	printf("Hello, %s %s", argv[1], argv[2]);
+  	printf("Hello, %s %s\n", argv[1], argv[2]);
+    printf("*argv[] pointer is %s", *argv);
   }
   return 0;
 }

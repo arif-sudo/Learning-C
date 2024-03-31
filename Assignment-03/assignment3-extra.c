@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 int main(void)
 {
-  //initialize vars
+  // initialize vars
   char *first;
   char *last;
 
-  //prompt user to input first and last name and use scanf() to store those to the initiliazed vars
-  printf("Enter your first name: ");
-  scanf("%ms", &first);
+  // prompt user to input first and last name and use scanf() to store those to the initiliazed vars
   printf("Enter your last name: ");
-  scanf("%ms", &last);
+  scanf("%s", &first);
 
-  //print the welcome message!
-  printf("Hello %s %s!\n", first, last);
+  printf("Enter your last name: ");
+  scanf("%s", &last);
+
+  // print the welcome message!
+  printf("Hello %ms %ms!\n", first, last);
 
   free(first);
   free(last);
