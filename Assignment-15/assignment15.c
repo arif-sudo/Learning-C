@@ -1,10 +1,11 @@
 #include <stdio.h>
 
+typedef int *Pointer;
 int main(void)
 {
   //declare int variable and a pointer to the int variable
   int variable = 15;
-  int *ptr = &variable;
+  Pointer ptr = &variable;
 
   //standard, just printing the value
   printf("The value of int variable is: %d\n", variable);
