@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 void getEmployee(Employee *e)
 {
     printf("Enter employee's ID: ");
-    //scanf("%d", &e.id); // error: 'e' is a pointer; did you mean to use '->'? Issue[2]
+    //scanf("%d", &e.id); // error: 'e' is a pointer; did you mean to use '->'?
     scanf("%d", &e->id); 
 
     printf("Enter employee's First Name: ");
@@ -69,8 +69,6 @@ void printEmployee(Employee e)
  */
 
 /* Issue 2
- * Previous code stems from passing the Employee structure to the getEmployee function by value. 
- * When you pass Employee structure by value, a copy of the structure is created within the function, 
- * and any modifications made to it won't affect the original structure in main. 
+ * Previous code stems from passing the Employee structure to the getEmployee function by value.  
  * To resolve this issue, you should pass the Employee structure by reference (using pointers).
 */

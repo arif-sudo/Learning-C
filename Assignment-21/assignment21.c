@@ -24,14 +24,14 @@ int main(void)
 	// first = member of the 'data' struct
 	// notice that employee1 and employee2 are 'data' struct instances themselves
 	struct employees engineering_dept;
-	for (int i = 0; i < 2; i++)
+	for (int i = 1; i <= 2; i++)
 	{
 		struct data *employee;
-		if (i == 0)
+		if (i == 1)
 			employee = &engineering_dept.employee1;
-		else if (i == 1)
+		else if (i == 2)
 			employee = &engineering_dept.employee2;
-		employee->employee_id = i + 1;
+		employee->employee_id = i;
 
 		printf("Enter the employee's first name: ");
 		scanf("%s", &employee->first);
@@ -49,12 +49,12 @@ int main(void)
 	}
 
 	// print all the info we just stored for each employee
-	for (int i = 0; i < 2; i++)
+	for (int i = 1; i <= 2; i++)
 	{
 		struct data *employee;
-		if (i == 0)
+		if (i == 1)
 			employee = &engineering_dept.employee1;
-		else if (i == 1)
+		else if (i == 2)
 			employee = &engineering_dept.employee2;
 
 		printf("\nEmployee information for %s %s: ", employee->first, employee->last);
